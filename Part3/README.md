@@ -7,29 +7,31 @@ When answering the questions, remember to use all the resources at your disposal
 
  ### What is concurrency? What is parallelism? What's the difference?
  > *Your answer here*
- 
+ ###parallelism: Gjøre flere ting samtidig
+ ###Concurrency: Switche fort mellom å gjøre forskjellige ting, sånn at de tilsynelatende gjøres samtidig.
+
  ### Why have machines become increasingly multicore in the past decade?
  > *Your answer here*
- 
+ # Fordi multicore gir deg bedre utelse, og det har i større og større grad blitt mulig det siste tiåret siden de har blitt mindre.
  ### What kinds of problems motivates the need for concurrent execution?
  (Or phrased differently: What problems do concurrency help in solving?)
  > *Your answer here*
- 
+ # Utnytter ventetiden mens man venter på inn/uotputs.
  ### Does creating concurrent programs make the programmer's life easier? Harder? Maybe both?
  (Come back to this after you have worked on part 4 of this exercise)
  > *Your answer here*
- 
+
  ### What are the differences between processes, threads, green threads, and coroutines?
  > *Your answer here*
- 
+# Coroutines er at ting gjennomføres sekvensielt (prosedyre), mens med tråder kan man consepuelt gjøre flere ting samtidig. Greenthreads er styrt av et runtime libary eller en virutal machine i stedenfor et naivt OS.
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
  > *Your answer here*
- 
+
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
- > *Your answer here*
- 
+ > *Gjør at bare en tråd kan være i execution mode om gangen*
+
  ### With this in mind: What is the workaround for the GIL (Hint: it's another module)?
- > *Your answer here*
- 
- ### What does `func GOMAXPROCS(n int) int` change? 
- > *Your answer here*
+ > *Use the multiprocess module*
+
+ ### What does `func GOMAXPROCS(n int) int` change?
+ > *GOMAXPROCS sets the maximum number of CPUs that can be executing simultaneously and returns the previous setting. If n < 1, it does not change the current setting. The number of logical CPUs on the local machine can be queried with NumCPU. This call will go away when the scheduler improves.*
