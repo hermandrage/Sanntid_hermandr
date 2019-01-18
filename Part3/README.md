@@ -21,10 +21,10 @@ When answering the questions, remember to use all the resources at your disposal
  > *Begge deler muliggjør ting du ikke kunne gjort uten concurrency, men mer styr.*
 
  ### What are the differences between processes, threads, green threads, and coroutines?
- > *Coroutines er at ting gjennomføres sekvensielt (prosedyre), mens med tråder kan man consepuelt gjøre flere ting samtidig. Greenthreads er styrt av et runtime libary eller en virutal machine i stedenfor et naivt OS.*
+ > *Coroutines er at ting gjennomføres sekvensielt (prosedyre), mens med tråder kan man consepuelt gjøre flere ting samtidig. Greenthreads er styrt av et runtime libary eller en virutal machine i stedenfor et naivt OS. Processes kjører på en separat memoryspace, mens tråder gjører på en som er delt.*
 
  ### Which one of these do `pthread_create()` (C/POSIX), `threading.Thread()` (Python), `go` (Go) create?
- > *Your answer here*
+ > *pthread_create() lager en ny tråd, threading.Thread() lager en greenthread og go er en coroutine.*
 
  ### How does pythons Global Interpreter Lock (GIL) influence the way a python Thread behaves?
  > *Gjør at bare en tråd kan være i execution mode om gangen*
